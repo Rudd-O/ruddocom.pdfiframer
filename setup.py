@@ -15,12 +15,12 @@ setup(
     version='1.0',
     description="PDF IFRAME add-on for Plone",
     long_description=long_description,
-    # Get more from https://pypi.org/classifiers/
+    long_description_content_type='text/markdown',
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: Addon",
-        "Framework :: Plone :: 6.0.0",
+        "Framework :: Plone :: 6.0",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.6",
         "Operating System :: OS Independent",
