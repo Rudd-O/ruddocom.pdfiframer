@@ -18,14 +18,16 @@ function stopIframesInProgress(myBase) {
         iframedoc = iframe.contentWindow.document;
         a = document.createElement("a")
         a.setAttribute("href", src);
+        a.setAttribute("style", "top: 0; bottom: 0; left: 0; right: 0; position: absolute; display: flex;");
         img = iframedoc.createElement("img");
-        img.setAttribute("style", "max-width: 100%; max-height: 90vh; margin-left: auto; margin-right: auto; display: block;");
+        img.setAttribute("style", "max-width: 100%; margin-left: auto; margin-right: auto; display: block;");
         img.setAttribute("src", iconSrc);
         a.appendChild(img)
         body = iframedoc.createElement("body")
         body.setAttribute("style", "margin: 0; padding: 0; background-color: rgba(0, 0, 0, 0.05);");
         body.appendChild(a);
         html = iframedoc.createElement("html");
+        html.setAttribute("height", "100%");
         html.appendChild(body);
         iframe.setAttribute("srcdoc", "<html>" + html.innerHTML + "</html>");
       }
