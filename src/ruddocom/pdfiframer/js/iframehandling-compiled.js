@@ -20,7 +20,7 @@ function stopIframesInProgress(myBase) {
         a.setAttribute("href", src);
         a.setAttribute("style", "top: 0; bottom: 0; left: 0; right: 0; position: absolute; display: flex;");
         img = iframedoc.createElement("img");
-        img.setAttribute("style", "max-width: 100%; margin-left: auto; margin-right: auto; display: block;");
+        img.setAttribute("style", "max-width: 90%; margin-left: auto; margin-right: auto; display: block;");
         img.setAttribute("src", iconSrc);
         a.appendChild(img)
         body = iframedoc.createElement("body")
