@@ -7,7 +7,7 @@
     i18n_domain="ruddocom.pdfiframer">
 
   <browser:resourceDirectory
-    name="iframehandling"
+    name="ruddocom-pdfiframer"
     directory="./js" />
 
   <genericsetup:registerProfile
@@ -16,6 +16,15 @@
       directory="profiles/default"
       description="Changes PDFs embedded in IFRAMEs to clickable icons."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:upgradeDepends
+      title="Redo resource registry"
+      description="Use new style for registry"
+      source="*"
+      destination="1001"
+      import_steps="plone.app.registry"
+      profile="ruddocom.pdfiframer:default"
       />
 
   <genericsetup:registerProfile

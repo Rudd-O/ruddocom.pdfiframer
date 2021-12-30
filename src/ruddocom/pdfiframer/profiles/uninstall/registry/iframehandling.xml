@@ -4,11 +4,18 @@
     i18n:domain="manuelamador.policy">
 
   <records prefix="plone.resources/iframehandling"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry' remove="true">
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'
+           remove="true">
   </records>
 
   <records prefix="plone.bundles/iframehandling"
-           interface='Products.CMFPlone.interfaces.IBundleRegistry' remove="true">
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           remove="true">
+  </records>
+
+  <records prefix="plone.bundles/ruddocom.pdfiframer"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           remove="true">
   </records>
 
 </registry>
