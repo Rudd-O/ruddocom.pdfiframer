@@ -30,7 +30,7 @@ class PdfIframerViewlet(BrowserView):
     @property
     def src(self):
         root = self.context.portal_url.getPortalObject().absolute_url()
-        version = "1.1-1"
+        version = "1.1-2"
         return root + "/++resource++ruddocom-pdfiframer/iframehandling-compiled.js?version=%s" % version
 
     def update(self):
