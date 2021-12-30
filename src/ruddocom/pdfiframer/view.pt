@@ -1,1 +1,1 @@
-<script type="text/javascript" tal:attributes="src view/src"/>
+<script tal:attributes="src view/src"/>
