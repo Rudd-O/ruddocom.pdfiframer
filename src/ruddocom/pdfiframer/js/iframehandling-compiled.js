@@ -10,7 +10,7 @@ function stopIframesInProgress() {
     "Mobile.*Firefox"
   ];
   noembedRe = new RegExp(noembed.join("|"), "i");
-  if (noembedRe.test(navigator.userAgent) || 1) {
+  if (noembedRe.test(navigator.userAgent)) {
     for (i = 0; i < iframes.length; ++i) {
       iframe = iframes[i];
       src = iframe.getAttribute("src");
