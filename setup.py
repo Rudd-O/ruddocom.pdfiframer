@@ -12,7 +12,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='ruddocom.pdfiframer',
-    version='1.0',
+    version='1.1',
     description="PDF IFRAME add-on for Plone",
     long_description=long_description,
     long_description_content_type='text/markdown',

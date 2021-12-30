@@ -27,6 +27,15 @@
       profile="ruddocom.pdfiframer:default"
       />
 
+  <genericsetup:upgradeDepends
+      title="Redo resource registry"
+      description="Use new style for registry"
+      source="*"
+      destination="1002"
+      import_steps="plone.app.registry"
+      profile="ruddocom.pdfiframer:default"
+      />
+
   <genericsetup:registerProfile
       name="uninstall"
       title="Uninstall fixer for PDFs embedded in IFRAMEs"
@@ -38,6 +47,13 @@
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="ruddocom.pdfiframer-hiddenprofiles"
+      />
+
+  <browser:viewlet
+      name="ruddocom.pdfiframer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".PdfIframerViewlet"
+      permission="zope2.View"
       />
 
 </configure>

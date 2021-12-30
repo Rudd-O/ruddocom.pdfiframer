@@ -2,7 +2,8 @@
 
 This Plone add-on adds a bit of JavaScript that turns all served `IFRAME`s
 which embed a PDF into a clickable icon the user must tap or click before
-the PDF is actually embedded and rendered.
+the PDF is actually embedded and rendered.  This behavior is only active
+on certain mobile browsers known not to display PDFs embedded.
 
 This not only saves you bandwidth, it also prevents a nasty behavior on
 mobile devices when embedding PDFs using `IFRAME`s — instead of the PDF
@@ -15,6 +16,13 @@ mobile visitors can download the PDF by clicking / tapping on the icon.
 Note that, by default, Plone filters `IFRAME` tags out of content types.
 Use the HTML filtering control panel configuration screen to allow `IFRAME`s
 to be used on your Plone site.
+
+
+## Notes
+
+We use a footer viewlet to include the JavaScript, because on mobile Fennec
+or Firefox Focus, the `IFRAME` has already begun loading and the download
+window pops up before the `DOMContentLoaded` event has happened.
 
 
 ## Setup
