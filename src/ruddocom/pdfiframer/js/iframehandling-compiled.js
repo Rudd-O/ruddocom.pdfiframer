@@ -1,16 +1,16 @@
 function stopIframesInProgress() {
-  scripts = document.getElementsByTagName('script');
-  index = scripts.length - 1;
-  myScript = scripts[index];
-  myBase = myScript.src.split("/").slice(0,-1).join("/");
-  iconSrc = myBase + "/download-pdf-icon.svg";
-  iframes = document.getElementsByTagName("iframe");
   noembed = [
     "Chrome.*Mobile",
     "Mobile.*Firefox"
   ];
   noembedRe = new RegExp(noembed.join("|"), "i");
   if (noembedRe.test(navigator.userAgent)) {
+    scripts = document.getElementsByTagName('script');
+    index = scripts.length - 1;
+    myScript = scripts[index];
+    myBase = myScript.src.split("/").slice(0,-1).join("/");
+    iconSrc = myBase + "/download-pdf-icon.svg";
+    iframes = document.getElementsByTagName("iframe");
     for (i = 0; i < iframes.length; ++i) {
       iframe = iframes[i];
       src = iframe.getAttribute("src");
@@ -33,4 +33,6 @@ function stopIframesInProgress() {
     }
   }
 }
+
 stopIframesInProgress();
+document.addEventListener("DOMContentLoaded", function(event) { stopIframesInProgress(); });
